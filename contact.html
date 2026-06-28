@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductFinder AI — Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="animate-pop">
+        <a href="index.html" class="logo">⚡ Product Finder</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <a href="search.html" class="nav-cta">Try Now</a>
+    </nav>
+
+    <section class="page-section animate-on-scroll">
+        <div class="section-header">
+            <h2>Message Us</h2>
+            <div class="heading-line"></div>
+            <p class="section-sub">Have a question, suggestion, or partnership inquiry? We'd love to hear from you.</p>
+        </div>
+
+        <div class="contact-layout">
+            <div class="contact-info animate-pop delay-1">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <div>
+                        <h4>Email</h4>
+                        <p>hello@productfinder.ai</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span>💬</span>
+                    <div>
+                        <h4>Live Chat</h4>
+                        <p>Available Mon–Fri, 9am–6pm</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span>🌍</span>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Remote — serving worldwide</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="animate-pop delay-2" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Subject">
+                <textarea placeholder="Your message..."></textarea>
+                <button type="submit">Send Message ✉️</button>
+                <p id="form-msg" style="display:none;color:#adff2f;text-align:center;font-weight:600;">
+                    ✅ Message sent! We'll get back to you soon.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

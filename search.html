@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductFinder AI — Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="animate-pop">
+        <a href="index.html" class="logo">⚡ Product Finder</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html" class="active">Search</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="search.html" class="nav-cta">Try Now</a>
+    </nav>
+
+    <section class="page-section animate-on-scroll">
+        <div class="section-header">
+            <h2>Search Products</h2>
+            <div class="heading-line"></div>
+            <p class="section-sub">Find anything within your budget and requirements instantly.</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="query" placeholder="Example: Best office laptops under $1000">
+            <button onclick="searchProducts()">Search</button>
+        </div>
+
+        <div class="filters">
+            <select id="budget">
+                <option value="">💰 Budget</option>
+                <option value="100">Under $100</option>
+                <option value="300">Under $300</option>
+                <option value="500">Under $500</option>
+                <option value="1000">Under $1000</option>
+                <option value="2000">$2000+</option>
+            </select>
+            <select id="category">
+                <option value="">📦 Category</option>
+                <option>Laptops</option>
+                <option>Headphones</option>
+                <option>Phones</option>
+                <option>Cameras</option>
+                <option>Monitors</option>
+            </select>
+            <select id="purpose">
+                <option value="">🎯 Purpose</option>
+                <option>Gaming</option>
+                <option>Office Work</option>
+                <option>Travel</option>
+                <option>Students</option>
+                <option>Professional</option>
+            </select>
+        </div>
+
+        <h3 class="rec-title">Recommended Searches</h3>
+        <div class="recommendations">
+            <div class="card" onclick="fillSearch('Top 10 laptops for office work under $1000')">
+                <span class="card-icon">💻</span>
+                <p>Top 10 laptops for office work under $1000</p>
+            </div>
+            <div class="card" onclick="fillSearch('Best gaming headphones under $150')">
+                <span class="card-icon">🎧</span>
+                <p>Best gaming headphones under $150</p>
+            </div>
+            <div class="card" onclick="fillSearch('Best cameras for beginners under $800')">
+                <span class="card-icon">📷</span>
+                <p>Best cameras for beginners under $800</p>
+            </div>
+            <div class="card" onclick="fillSearch('Best smartphones under $500')">
+                <span class="card-icon">📱</span>
+                <p>Best smartphones under $500</p>
+            </div>
+        </div>
+
+        <div id="results"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
