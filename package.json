@@ -1,0 +1,23 @@
+{
+  "name": "productfinder",
+  "version": "1.0.0",
+  "description": "ProductFinder AI - Find the best products instantly with AI-powered recommendations",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shamimahmedker-hub/Product-Finder-Vercel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shamimahmedker-hub/Product-Finder-Vercel/issues"
+  },
+  "homepage": "https://github.com/shamimahmedker-hub/Product-Finder-Vercel#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
