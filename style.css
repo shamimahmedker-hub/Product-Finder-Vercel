@@ -102,7 +102,7 @@ nav {
     font-size: 24px;
     font-weight: 800;
     text-decoration: none;
-    background: linear-gradient(90deg, #ff6b00, #ff3aff, #00cfff);
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -131,7 +131,7 @@ nav ul li a::after {
     position: absolute;
     bottom: -2px; left: 0;
     width: 0; height: 2px;
-    background: linear-gradient(90deg, #ff6b00, #ff3aff);
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
     border-radius: 99px;
     transition: width 0.3s;
 }
@@ -148,21 +148,21 @@ nav ul li a:hover::after {
 
 .nav-cta {
     padding: 10px 26px;
-    background: linear-gradient(135deg, #ff6b00, #ff3aff);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
     border-radius: 50px;
     text-decoration: none;
-    color: white;
+    color: var(--color-cards);
     font-weight: 700;
     font-size: 14px;
     white-space: nowrap;
     flex-shrink: 0;
     transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 18px rgba(255,107,0,0.35);
+    box-shadow: 0 4px 18px rgba(37, 99, 235, 0.35);
 }
 
 .nav-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 26px rgba(255,107,0,0.55);
+    box-shadow: 0 8px 26px rgba(37, 99, 235, 0.55);
 }
 
 /* ── Hero (Home page) ── */
@@ -190,14 +190,14 @@ nav ul li a:hover::after {
 
 .hero::before {
     width: 560px; height: 560px;
-    background: radial-gradient(circle, rgba(255,107,0,0.35), transparent 60%);
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.35), transparent 60%);
     top: -10%; left: -8%;
     animation-duration: 13s;
 }
 
 .hero::after {
     width: 420px; height: 420px;
-    background: radial-gradient(circle, rgba(0,207,255,0.25), transparent 60%);
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.25), transparent 60%);
     bottom: -10%; right: -8%;
     animation-duration: 9s;
     animation-direction: reverse;
@@ -214,7 +214,7 @@ nav ul li a:hover::after {
     font-weight: 900;
     line-height: 1.1;
     letter-spacing: -1px;
-    background: linear-gradient(135deg, #ffffff 0%, #ffb347 50%, #ff6b00 100%);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -226,7 +226,7 @@ nav ul li a:hover::after {
     height: 3px;
     width: 120px;
     border-radius: 99px;
-    background: linear-gradient(90deg, #ff6b00, #ff3aff, #00cfff);
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
     margin: 0 auto 22px;
     animation: shimmerLine 0.8s ease 0.4s both;
 }
@@ -258,19 +258,19 @@ nav ul li a:hover::after {
 .btn {
     display: inline-block;
     padding: 16px 48px;
-    background: linear-gradient(135deg, #ff6b00, #ff3aff);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
     border-radius: 50px;
     text-decoration: none;
-    color: white;
+    color: var(--color-cards);
     font-weight: 700;
     font-size: 16px;
-    box-shadow: 0 8px 30px rgba(255,107,0,0.35);
+    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.35);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn:hover {
     transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 14px 40px rgba(255,107,0,0.55);
+    box-shadow: 0 14px 40px rgba(37, 99, 235, 0.55);
 }
 
 /* ── Features strip (Home) ── */
@@ -302,7 +302,7 @@ nav ul li a:hover::after {
 
 .feature-item:hover {
     transform: translateY(-7px);
-    box-shadow: 0 14px 36px rgba(255,107,0,0.15);
+    box-shadow: 0 14px 36px rgba(37, 99, 235, 0.15);
 }
 
 .feature-item > span {
@@ -337,7 +337,7 @@ nav ul li a:hover::after {
 .section-header h2 {
     font-size: clamp(28px, 4vw, 48px);
     font-weight: 800;
-    background: linear-gradient(135deg, #ffffff, #aaaaaa);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -373,7 +373,7 @@ nav ul li a:hover::after {
 }
 
 .search-box input:focus {
-    border-color: #ff6b00;
+    border-color: var(--color-primary);
     background: rgba(255,255,255,0.1);
 }
 
@@ -383,8 +383,8 @@ nav ul li a:hover::after {
     padding: 16px 34px;
     border: none;
     border-radius: 12px;
-    background: linear-gradient(135deg, #ff6b00, #ff3aff);
-    color: white;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    color: var(--color-cards);
     font-weight: 700;
     font-size: 15px;
     cursor: pointer;
@@ -394,7 +394,7 @@ nav ul li a:hover::after {
 
 .search-box button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(255,107,0,0.4);
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
 }
 
 .filters {
@@ -416,7 +416,7 @@ nav ul li a:hover::after {
     transition: border-color 0.2s;
 }
 
-.filters select:focus { border-color: #ff6b00; }
+.filters select:focus { border-color: var(--color-primary); }
 .filters select option { background: #1a1716; }
 
 .rec-title {
@@ -455,8 +455,8 @@ nav ul li a:hover::after {
 
 .card:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 16px 40px rgba(255,107,0,0.2);
-    border-color: rgba(255,107,0,0.4);
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.2);
+    border-color: rgba(37, 99, 235, 0.4);
 }
 
 .card-icon { font-size: 28px; }
@@ -492,7 +492,7 @@ nav ul li a:hover::after {
 
 .about-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 14px 36px rgba(255,58,255,0.15);
+    box-shadow: 0 14px 36px rgba(79, 70, 229, 0.15);
 }
 
 .about-icon { font-size: 40px; display: block; margin-bottom: 16px; }
@@ -551,7 +551,7 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-    border-color: #ff6b00;
+    border-color: var(--color-primary);
     background: rgba(255,255,255,0.09);
 }
 
@@ -562,8 +562,8 @@ form button {
     padding: 16px;
     border: none;
     border-radius: 12px;
-    background: linear-gradient(135deg, #ff6b00, #ff3aff);
-    color: white;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    color: var(--color-cards);
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;
@@ -572,7 +572,7 @@ form button {
 
 form button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(255,107,0,0.4);
+    box-shadow: 0 10px 28px rgba(37, 99, 235, 0.4);
 }
 
 /* ── Responsive ── */
