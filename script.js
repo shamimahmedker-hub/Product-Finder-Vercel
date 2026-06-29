@@ -10,6 +10,16 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
+/* ── Enter key triggers search ── */
+document.addEventListener('DOMContentLoaded', () => {
+    const input = document.getElementById('query');
+    if (input) {
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') searchProducts();
+        });
+    }
+});
+
 /* ── Search helpers ── */
 function fillSearch(text) {
     const q = document.getElementById('query');
@@ -70,15 +80,8 @@ async function searchProducts() {
 
             const buyBtn = product.url
                 ? `<a href="${product.url}" target="_blank" rel="noopener"
-                      style="display:inline-block;padding:10px 22px;background:linear-gradient(135deg,#ff6b00,#ff3aff);border-radius:50px;color:white;font-weight:700;font-size:13px;text-decoration:none;">
-                      ${product.live ? '🛒 Buy Now' : '🔗 View Deal'} →
-                   </a>`
-                : '';
-
-            const amazonBtn = product.amazon_url
-                ? `<a href="${product.amazon_url}" target="_blank" rel="noopener"
                       style="display:inline-block;padding:10px 22px;background:linear-gradient(135deg,#ff9900,#e47911);border-radius:50px;color:white;font-weight:700;font-size:13px;text-decoration:none;">
-                      🛒 Find on Amazon
+                      🛒 Buy on Amazon →
                    </a>`
                 : '';
 
@@ -102,7 +105,6 @@ async function searchProducts() {
                         </div>
                         <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;">
                             ${buyBtn}
-                            ${product.live ? amazonBtn : ''}
                         </div>
                     </div>
                 </div>
@@ -110,7 +112,7 @@ async function searchProducts() {
             results.appendChild(card);
         });
     } catch (err) {
-        results.innerHTML = `<p style="color:rgba(255,255,255,0.4);padding:20px 0;">Could not reach the server. Make sure the backend is running.</p>`;
+        results.innerHTML = `<p style="color:rgba(255,255,255,0.4);padding:20px 0;">Search failed. Please check your connection and try again.</p>`;
     }
 }
 
