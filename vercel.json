@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "public": true,
   "builds": [
     {
       "src": "app.py",
@@ -8,8 +9,8 @@
   ],
   "routes": [
     {
-      "src": "/google.*\\.html$",
-      "dest": "google1dace672a945987d.html"
+      "src": "^/google[^/]*\\.html$",
+      "dest": "$1"
     },
     {
       "src": "/(.*)",
