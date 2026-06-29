@@ -111,6 +111,9 @@ async function searchProducts() {
             `;
             results.appendChild(card);
         });
+
+        // Scroll results into view after rendering
+        setTimeout(() => results.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
     } catch (err) {
         results.innerHTML = `<p style="color:rgba(255,255,255,0.4);padding:20px 0;">Search failed. Please check your connection and try again.</p>`;
     }
