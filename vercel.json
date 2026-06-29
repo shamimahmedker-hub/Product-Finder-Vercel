@@ -8,6 +8,10 @@
   ],
   "routes": [
     {
+      "src": "/google.*\\.html$",
+      "dest": "google1dace672a945987d.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "app.py"
     }
