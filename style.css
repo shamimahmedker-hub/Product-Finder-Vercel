@@ -5,6 +5,22 @@
     font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+/* ── Brand Color Palette ── */
+:root {
+    /* Primary Colors */
+    --color-primary: #2563EB;           /* Deep Blue */
+    --color-secondary: #4F46E5;         /* Indigo */
+    --color-accent: #06B6D4;            /* Cyan */
+    
+    /* Background & Surface */
+    --color-background: #F8FAFC;        /* Very Light Gray */
+    --color-cards: #FFFFFF;             /* White */
+    
+    /* Text Colors */
+    --color-text-main: #0F172A;         /* Dark Slate */
+    --color-text-secondary: #64748B;    /* Gray */
+}
+
 /* ── Body ── */
 body {
     background: linear-gradient(135deg, #0a0812 0%, #08111a 50%, #0f0b17 100%);
