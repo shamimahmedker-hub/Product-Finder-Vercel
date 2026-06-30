@@ -108,27 +108,27 @@ def serpapi_search(query: str, budget: str = None) -> list:
     return products
 
 PRODUCTS = [
-    {"id": 1,  "name": "Apple MacBook Air M2",        "price": "$1,099", "rating": "⭐ 4.9", "category": "Laptops",    "purpose": ["Office Work","Professional","Students"], "budget": 2000, "description": "Ultra-thin, all-day battery, blazing fast M2 chip. Perfect for productivity.", "url": "https://www.amazon.com/s?k=Apple+MacBook+Air+M2"},
-    {"id": 2,  "name": "Dell XPS 15",                 "price": "$999",   "rating": "⭐ 4.7", "category": "Laptops",    "purpose": ["Professional","Office Work"],            "budget": 1000, "description": "Stunning OLED display, powerful Intel Core i7. Built for creators.", "url": "https://www.amazon.com/s?k=Dell+XPS+15"},
-    {"id": 3,  "name": "Lenovo ThinkPad X1 Carbon",   "price": "$899",   "rating": "⭐ 4.8", "category": "Laptops",    "purpose": ["Office Work","Travel"],                  "budget": 1000, "description": "Military-grade durability, legendary keyboard, feather-light at 2.48 lbs.", "url": "https://www.amazon.com/s?k=Lenovo+ThinkPad+X1+Carbon"},
-    {"id": 4,  "name": "Acer Aspire 5",               "price": "$399",   "rating": "⭐ 4.4", "category": "Laptops",    "purpose": ["Students","Office Work"],                "budget": 500,  "description": "Reliable everyday laptop with AMD Ryzen 5 — great value for students.", "url": "https://www.amazon.com/s?k=Acer+Aspire+5"},
-    {"id": 5,  "name": "ASUS ROG Strix G16",          "price": "$1,299", "rating": "⭐ 4.8", "category": "Laptops",    "purpose": ["Gaming"],                               "budget": 2000, "description": "RTX 4070 GPU, 165Hz display, top-tier gaming performance.", "url": "https://www.amazon.com/s?k=ASUS+ROG+Strix+G16"},
-    {"id": 6,  "name": "HP Pavilion 15",              "price": "$549",   "rating": "⭐ 4.3", "category": "Laptops",    "purpose": ["Students","Office Work","Travel"],       "budget": 1000, "description": "Balanced performance laptop for everyday tasks.", "url": "https://www.amazon.com/s?k=HP+Pavilion+15"},
-    {"id": 7,  "name": "Microsoft Surface Laptop 5",  "price": "$999",   "rating": "⭐ 4.6", "category": "Laptops",    "purpose": ["Office Work","Professional"],            "budget": 1000, "description": "Premium build, brilliant touchscreen, seamless Windows 11 experience.", "url": "https://www.amazon.com/s?k=Microsoft+Surface+Laptop+5"},
-    {"id": 8,  "name": "Sony WH-1000XM5",             "price": "$299",   "rating": "⭐ 4.9", "category": "Headphones", "purpose": ["Office Work","Travel","Professional"],   "budget": 300,  "description": "Industry-leading noise cancellation. 30-hour battery.", "url": "https://www.amazon.com/s?k=Sony+WH-1000XM5"},
-    {"id": 9,  "name": "Apple AirPods Pro 2",         "price": "$249",   "rating": "⭐ 4.8", "category": "Headphones", "purpose": ["Travel","Office Work"],                  "budget": 300,  "description": "Adaptive transparency, spatial audio, H2 chip.", "url": "https://www.amazon.com/s?k=Apple+AirPods+Pro+2"},
-    {"id": 10, "name": "SteelSeries Arctis Nova Pro", "price": "$149",   "rating": "⭐ 4.7", "category": "Headphones", "purpose": ["Gaming"],                               "budget": 300,  "description": "Premium gaming audio with active noise cancellation.", "url": "https://www.amazon.com/s?k=SteelSeries+Arctis+Nova+Pro"},
-    {"id": 11, "name": "Anker Soundcore Q45",         "price": "$59",    "rating": "⭐ 4.5", "category": "Headphones", "purpose": ["Students","Travel"],                     "budget": 100,  "description": "Budget ANC headphones with 50-hour battery. Incredible value.", "url": "https://www.amazon.com/s?k=Anker+Soundcore+Q45"},
-    {"id": 12, "name": "Bose QuietComfort 45",        "price": "$229",   "rating": "⭐ 4.7", "category": "Headphones", "purpose": ["Travel","Office Work"],                  "budget": 300,  "description": "Legendary Bose comfort and noise cancellation.", "url": "https://www.amazon.com/s?k=Bose+QuietComfort+45"},
-    {"id": 13, "name": "iPhone 15 Pro",               "price": "$999",   "rating": "⭐ 4.9", "category": "Phones",     "purpose": ["Professional","Travel"],                 "budget": 1000, "description": "Titanium build, A17 Pro chip, 48MP ProRAW camera.", "url": "https://www.amazon.com/s?k=iPhone+15+Pro"},
-    {"id": 14, "name": "Samsung Galaxy S24",          "price": "$799",   "rating": "⭐ 4.8", "category": "Phones",     "purpose": ["Professional","Office Work"],            "budget": 1000, "description": "Galaxy AI features, Snapdragon 8 Gen 3, 50MP camera.", "url": "https://www.amazon.com/s?k=Samsung+Galaxy+S24"},
-    {"id": 15, "name": "Google Pixel 8a",             "price": "$499",   "rating": "⭐ 4.7", "category": "Phones",     "purpose": ["Students","Office Work","Travel"],       "budget": 500,  "description": "7 years of OS updates, best computational photography.", "url": "https://www.amazon.com/s?k=Google+Pixel+8a"},
-    {"id": 16, "name": "Sony ZV-E10",                 "price": "$598",   "rating": "⭐ 4.7", "category": "Cameras",    "purpose": ["Professional","Travel"],                 "budget": 1000, "description": "Interchangeable lens mirrorless, perfect for vloggers.", "url": "https://www.amazon.com/s?k=Sony+ZV-E10"},
-    {"id": 17, "name": "Canon EOS Rebel SL3",         "price": "$649",   "rating": "⭐ 4.6", "category": "Cameras",    "purpose": ["Students","Travel"],                     "budget": 1000, "description": "World's lightest DSLR. Beginner-friendly with 4K video.", "url": "https://www.amazon.com/s?k=Canon+EOS+Rebel+SL3"},
-    {"id": 18, "name": "GoPro HERO12 Black",          "price": "$349",   "rating": "⭐ 4.7", "category": "Cameras",    "purpose": ["Travel","Gaming"],                       "budget": 500,  "description": "Waterproof to 33ft, 5.3K video, HyperSmooth 6.0 stabilization.", "url": "https://www.amazon.com/s?k=GoPro+HERO12+Black"},
-    {"id": 19, "name": "LG 27GP850-B",               "price": "$299",   "rating": "⭐ 4.8", "category": "Monitors",   "purpose": ["Gaming","Professional"],                 "budget": 300,  "description": "27\" 1440p 165Hz IPS. Nano IPS technology for rich colors.", "url": "https://www.amazon.com/s?k=LG+27GP850-B"},
-    {"id": 20, "name": "Dell UltraSharp U2723DE",     "price": "$649",   "rating": "⭐ 4.9", "category": "Monitors",   "purpose": ["Professional","Office Work"],            "budget": 1000, "description": "27\" 4K IPS Black panel, built-in USB-C hub.", "url": "https://www.amazon.com/s?k=Dell+UltraSharp+U2723DE"},
-    {"id": 21, "name": "Samsung Odyssey G7",          "price": "$449",   "rating": "⭐ 4.7", "category": "Monitors",   "purpose": ["Gaming"],                               "budget": 500,  "description": "32\" curved 1440p 240Hz quantum dot gaming monitor.", "url": "https://www.amazon.com/s?k=Samsung+Odyssey+G7"},
+    {"id": 1,  "name": "Apple MacBook Air M2",        "price": "$1,099", "rating": "⭐ 4.9", "category": "Laptops",    "purpose": ["Office Work","Professional","Students"], "budget": 2000, "description": "Powerful and portable laptop for professionals and students"},
+    {"id": 2,  "name": "Dell XPS 15",                 "price": "$999",   "rating": "⭐ 4.7", "category": "Laptops",    "purpose": ["Professional","Office Work"],            "budget": 1000, "description": "High-performance laptop for professional work"},
+    {"id": 3,  "name": "Lenovo ThinkPad X1 Carbon",   "price": "$899",   "rating": "⭐ 4.8", "category": "Laptops",    "purpose": ["Office Work","Travel"],                  "budget": 1000, "description": "Lightweight and durable business laptop"},
+    {"id": 4,  "name": "Acer Aspire 5",               "price": "$399",   "rating": "⭐ 4.4", "category": "Laptops",    "purpose": ["Students","Office Work"],                "budget": 500,  "description": "Budget-friendly laptop for everyday use"},
+    {"id": 5,  "name": "ASUS ROG Strix G16",          "price": "$1,299", "rating": "⭐ 4.8", "category": "Laptops",    "purpose": ["Gaming"],                               "budget": 2000, "description": "High-end gaming laptop with RTX graphics"},
+    {"id": 6,  "name": "HP Pavilion 15",              "price": "$549",   "rating": "⭐ 4.3", "category": "Laptops",    "purpose": ["Students","Office Work","Travel"],       "budget": 1000, "description": "Versatile laptop for work and entertainment"},
+    {"id": 7,  "name": "Microsoft Surface Laptop 5",  "price": "$999",   "rating": "⭐ 4.6", "category": "Laptops",    "purpose": ["Office Work","Professional"],            "budget": 1000, "description": "Premium ultrabook with touchscreen"},
+    {"id": 8,  "name": "Sony WH-1000XM5",             "price": "$299",   "rating": "⭐ 4.9", "category": "Headphones", "purpose": ["Office Work","Travel","Professional"],   "budget": 300,  "description": "Noise-cancelling headphones with great sound quality"},
+    {"id": 9,  "name": "Apple AirPods Pro 2",         "price": "$249",   "rating": "⭐ 4.8", "category": "Headphones", "purpose": ["Travel","Office Work"],                  "budget": 300,  "description": "Premium wireless earbuds with ANC"},
+    {"id": 10, "name": "SteelSeries Arctis Nova Pro", "price": "$149",   "rating": "⭐ 4.7", "category": "Headphones", "purpose": ["Gaming"],                               "budget": 300,  "description": "Professional gaming headset"},
+    {"id": 11, "name": "Anker Soundcore Q45",         "price": "$59",    "rating": "⭐ 4.5", "category": "Headphones", "purpose": ["Students","Travel"],                     "budget": 100,  "description": "Affordable noise-cancelling earbuds"},
+    {"id": 12, "name": "Bose QuietComfort 45",        "price": "$229",   "rating": "⭐ 4.7", "category": "Headphones", "purpose": ["Travel","Office Work"],                  "budget": 300,  "description": "Premium noise-cancelling headphones"},
+    {"id": 13, "name": "iPhone 15 Pro",               "price": "$999",   "rating": "⭐ 4.9", "category": "Phones",     "purpose": ["Professional","Travel"],                 "budget": 1000, "description": "Latest flagship smartphone with advanced camera"},
+    {"id": 14, "name": "Samsung Galaxy S24",          "price": "$799",   "rating": "⭐ 4.8", "category": "Phones",     "purpose": ["Professional","Office Work"],            "budget": 1000, "description": "Powerful Android phone with great display"},
+    {"id": 15, "name": "Google Pixel 8a",             "price": "$499",   "rating": "⭐ 4.7", "category": "Phones",     "purpose": ["Students","Office Work","Travel"],       "budget": 500,  "description": "Affordable Google phone with excellent camera"},
+    {"id": 16, "name": "Sony ZV-E10",                 "price": "$598",   "rating": "⭐ 4.7", "category": "Cameras",    "purpose": ["Professional","Travel"],                 "budget": 1000, "description": "Compact mirrorless camera for creators"},
+    {"id": 17, "name": "Canon EOS Rebel SL3",         "price": "$649",   "rating": "⭐ 4.6", "category": "Cameras",    "purpose": ["Students","Travel"],                     "budget": 1000, "description": "Beginner-friendly DSLR camera"},
+    {"id": 18, "name": "GoPro HERO12 Black",          "price": "$349",   "rating": "⭐ 4.7", "category": "Cameras",    "purpose": ["Travel","Gaming"],                       "budget": 500,  "description": "Action camera for adventure and vlogging"},
+    {"id": 19, "name": "LG 27GP850-B",               "price": "$299",   "rating": "⭐ 4.8", "category": "Monitors",   "purpose": ["Gaming","Professional"],                 "budget": 300,  "description": "Gaming monitor with 144Hz refresh rate"},
+    {"id": 20, "name": "Dell UltraSharp U2723DE",     "price": "$649",   "rating": "⭐ 4.9", "category": "Monitors",   "purpose": ["Professional","Office Work"],            "budget": 1000, "description": "Premium professional monitor"},
+    {"id": 21, "name": "Samsung Odyssey G7",          "price": "$449",   "rating": "⭐ 4.7", "category": "Monitors",   "purpose": ["Gaming"],                               "budget": 500,  "description": "High-performance gaming monitor"},
 ]
 
 def local_search(query: str, budget=None, category=None, purpose=None) -> list:
@@ -179,6 +179,15 @@ def local_search(query: str, budget=None, category=None, purpose=None) -> list:
 @app.route('/')
 def home():
     return send_from_directory('.', 'index.html')
+
+# Explicit routes for SEO files - must come BEFORE the catch-all route
+@app.route('/robots.txt')
+def robots():
+    return send_from_directory('.', 'robots.txt', mimetype='text/plain')
+
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory('.', 'sitemap.xml', mimetype='application/xml')
 
 @app.route('/<path:filename>')
 def static_files(filename):
