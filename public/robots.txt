@@ -1,0 +1,39 @@
+# Product Finder Robots.txt
+# Define crawler access rules for search engines
+
+# Allow all bots
+User-agent: *
+Allow: /
+Allow: /products
+Allow: /search
+Allow: /categories
+Allow: /about
+Allow: /contact
+Allow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /private/
+Disallow: /temp/
+
+# Specify sitemap location
+Sitemap: https://product-finder-vercel.vercel.app/sitemap.xml
+
+# Crawl delay (in seconds) - allows 2 requests per second
+Crawl-delay: 0.5
+
+# Request rate for Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.1
+
+# Specific rules for Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0.5
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: DotBot
+Disallow: /
